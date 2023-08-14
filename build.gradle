@@ -1,0 +1,27 @@
+plugins {
+    id "java"
+}
+
+allprojects {
+    apply plugin: "java"
+
+    repositories {
+        mavenCentral()
+        maven { url = "https://repo.starfarm.fun/public" }
+        maven {url = "https://repo.extendedclip.com/content/repositories/placeholderapi/"}
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+        compileOnly "org.projectlombok:lombok:1.18.26"
+        annotationProcessor "org.projectlombok:lombok:1.18.26"
+
+        compileOnly "org.spigotmc:spigot:1.16.5-R0.1-SNAPSHOT"
+        compileOnly "me.clip:placeholderapi:2.11.3"
+        compileOnly "com.github.dmulloy2:ProtocolLib:4.8.0"
+
+        implementation "com.j256.ormlite:ormlite-jdbc:5.0"
+    }
+
+    tasks.withType(JavaCompile)*.options*.encoding = 'UTF-8'
+}

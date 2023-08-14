@@ -1,0 +1,23 @@
+plugins {
+    id "net.minecrell.plugin-yml.bukkit" version "0.5.2"
+}
+
+bukkit {
+    name = "Bosses"
+    version = "1.0"
+    main = "ru.smole.bosses.plugin.BossesPlugin"
+    apiVersion = "1.16"
+    authors = ["Smole17"]
+    depend = ["ProtocolLib", "PlaceholderAPI"]
+    commands {
+        spawnboss {}
+        reloadmessages {}
+    }
+}
+
+dependencies {
+    implementation rootProject
+}
+
+jar.duplicatesStrategy DuplicatesStrategy.EXCLUDE
+jar.from configurations.runtimeClasspath.collect(project.&zipTree)

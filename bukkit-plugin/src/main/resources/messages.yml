@@ -1,0 +1,18 @@
+robber-hologram-display:
+  - "Привет, %player_name%!"
+  - "%robber_name% появится через %robber_time%"
+robber-die:
+  - "Босс %robber_name% был повержен."
+  - "Топ 3 игрока по урону:"
+  - "1. %player_name% - %robber_damage%"
+  - "2. %player_name% - %robber_damage%"
+  - "3. %player_name% - %robber_damage%"
+summoner-hologram-display:
+  - "Привет, %player_name%!"
+  - "%summoner_name% появится через %summoner_time%"
+summoner-die:
+  - "Босс %summoner_name% был повержен."
+  - "Топ 3 игрока по урону:"
+  - "1. %player_name% - %robber_damage%"
+  - "2. %player_name% - %robber_damage%"
+  - "3. %player_name% - %robber_damage%"
